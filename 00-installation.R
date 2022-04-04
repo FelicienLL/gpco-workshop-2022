@@ -4,6 +4,7 @@
 install.packages("tidyverse")
 install.packages("mrgsolve")
 install.packages("mapbayr")
+install.packages("shiny")
 
 # Check if installation is succesful
 Sys.which("make")
