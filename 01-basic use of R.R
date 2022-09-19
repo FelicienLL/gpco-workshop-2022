@@ -87,7 +87,7 @@ c(1234, "hello") #tout s'est converti en caractere !
 #' 4.3) data.frame = "tableau"
 data.frame(A = 1:6, B = c("a", "b", "c", "d", "e", "f"))
 #' Forcement rectangulaire...
-data.frame(A = 1:6, B = 1:4)
+try(data.frame(A = 1:6, B = 1:4))
 
 #' 4.4) Liste
 #' Un peu le meme principe qu'un vecteur, mais peut acceuillir tout type d'objets
