@@ -1,6 +1,10 @@
 # Install these packages
 # Can be quite long...
 
+# If you use R < 4.0
+# 1) It is a bad idea. Try to install R > 4.0.
+# 2) Otherwise, answer "no" if you get asked to install "source version that requires compilation".
+
 install.packages("tidyverse")
 install.packages("mrgsolve")
 install.packages("mapbayr")

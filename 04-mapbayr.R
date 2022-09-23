@@ -52,11 +52,14 @@ updated_mod <- est %>%
 updated_mod
 updated_mod %>%
   param()
+updated_mod %>%
+  revar()
+
+schema_a_tester <- expand.ev(amt = c(300, 1000, 3000, 10000, 30000))
 
 updated_mod %>%
-  ev(expand.ev(amt = c(300, 1000, 3000, 10000, 30000))) %>%
+  ev(schema_a_tester) %>%
   mrgsim(start = 24, end = 24, obsonly = TRUE)
-
 
 #' 3) Calculer une AUC
 CL <- get_param(est, "CL")
@@ -67,6 +70,7 @@ AUC
 
 
 # Cas pratique: RUXOLITINIB
+# 5 a 20 mg x2/j
 # Covariable
 # IOV
 # CV% to omega variance
