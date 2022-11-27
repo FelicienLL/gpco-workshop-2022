@@ -84,7 +84,7 @@ packages suivants:
 
 ## 6. Installer les supports necessaires à l’atelier
 
-# **SUPPORTS EN COURS D’ELABORATION**
+# <span style="color:red">**SUPPORTS EN COURS D’ELABORATION** </span>
 
 - Revenez tout en haut de la page et cliquer sur l’icône verte **“\<\>
   Code”** et sélectionnez “Download ZIP”
