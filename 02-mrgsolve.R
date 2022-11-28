@@ -79,7 +79,7 @@ simple %>%
   mrgsim() %>%
   plot()
 
-#' Variabilite inter-individuelle.
+#' 5. Variabilite inter-individuelle et residuelle
 #' Changer les matrices OMEGA (0.3, 0.2) et SIGMA (0.04, 0) dans simple.cpp
 #' Enregistrer dans simple2.cpp
 
