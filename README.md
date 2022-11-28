@@ -34,8 +34,16 @@ laissez-vous guider par les instructions d’installation.
 
 ## 3. Télécharger et installer Rtools
 
-Pour les utilisateurs de Windows uniquement. La version de Rtools à
-installer dépend de la version de R déjà installée. Rendez-vous sur
+Une partie du code que nous utiliserons sera écrite en langage C++, ce
+qui nécessite un logiciel pour compiler du C++.
+
+- Mac et Linux : compilateur C++ déjà présent sur ces machines. Pas
+  besoin d’installer de logiciel supplémentaire
+
+- Windows: Installer Rtools, voir ci-dessous.
+
+La version de Rtools à installer dépend de la version de R déjà
+installée. Rendez-vous sur
 <https://cran.r-project.org/bin/windows/Rtools/> et laissez-vous guider
 par les instructions d’installation. Attention, si vous avez choisi
 Rtools40 (ou inférieur), une étape manuelle est nécessaire pour
@@ -48,7 +56,7 @@ finaliser l’installation (voir les instructions d’installation).
 
 <!-- -->
 
-    #> [1] "R version 4.2.2 (2022-10-31)"
+    #> [1] "R version 4.2.0 (2022-04-22 ucrt)"
 
 - Éxecutez `Sys.which("make")` pour voir si Rtools s’est correctement
   installé. Vous devez obtenir un message du type :
