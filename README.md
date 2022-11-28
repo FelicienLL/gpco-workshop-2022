@@ -11,10 +11,15 @@ pratique de l’atelier “Optimiser le STP grâce aux outils d’adaptation
 Bayésienne”, organisé le 1<sup>er</sup> décembre 2022 par le Groupe de
 Pharmacologie Clinique en Oncologie.
 
+Vous pouvez utiliser un ordinateur Windows, Linux ou Mac: quoiqu’il en
+soit nous travaillerons tous de manière identique. Les utilisateurs
+Windows doivent simplement installer un logiciel supplémentaire (voir
+\#3).
+
 1.  Télécharger et installer R
 2.  Télécharger et installer RStudio
 3.  (ordinateur Windows uniquement) Télécharger et installer Rtools
-4.  Vérifier que R, RStudio et Rtools soient correctement installés.
+4.  Vérifier que R, RStudio (et Rtools) soient correctement installés.
 5.  Installer les packages necessaires à l’atelier
 6.  Installer les supports necessaires à l’atelier
 
@@ -34,24 +39,32 @@ laissez-vous guider par les instructions d’installation.
 
 ## 3. Télécharger et installer Rtools
 
-Pour les utilisateurs de Windows uniquement. La version de Rtools à
-installer dépend de la version de R déjà installée. Rendez-vous sur
+Une partie du code que nous utiliserons sera écrite en langage C++, ce
+qui nécessite un logiciel pour compiler du C++.
+
+- Mac et Linux : compilateur C++ déjà présent sur ces machines. Pas
+  besoin d’installer de logiciel supplémentaire
+
+- Windows: Installer Rtools, voir ci-dessous.
+
+La version de Rtools à installer dépend de la version de R déjà
+installée. Rendez-vous sur
 <https://cran.r-project.org/bin/windows/Rtools/> et laissez-vous guider
 par les instructions d’installation. Attention, si vous avez choisi
 Rtools40 (ou inférieur), une étape manuelle est nécessaire pour
 finaliser l’installation (voir les instructions d’installation).
 
-## 4. Vérifier que R, RStudio et Rtools soient correctement installés.
+## 4. Vérifier que R, RStudio (et Rtools) soient correctement installés.
 
 - Ouvrir RStudio
 - Éxecutez `R.version.string` pour afficher la version de R installée.
 
 <!-- -->
 
-    #> [1] "R version 4.2.2 (2022-10-31)"
+    #> [1] "R version 4.2.0 (2022-04-22 ucrt)"
 
-- Éxecutez `Sys.which("make")` pour voir si Rtools s’est correctement
-  installé. Vous devez obtenir un message du type :
+- Éxecutez `Sys.which("make")` pour voir vous pouvez compiler du C++.
+  Vous devez obtenir un message du type :
 
 <!-- -->
 
