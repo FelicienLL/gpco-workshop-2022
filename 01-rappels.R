@@ -25,6 +25,7 @@ library(mapbayr)
 
 library(tidyverse)
 (.packages())
+
 #' Pipe
 log(10)
 #' CTRL + SHIFT + M
