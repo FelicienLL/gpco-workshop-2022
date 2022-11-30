@@ -36,7 +36,7 @@ ecrire_commentaire_CL <- function(est){
 tableau_predictions <- function(est){
   est %>%
     as.data.frame() %>%
-    filter(time == 0) %>%
+    filter(time != 0) %>%
     select(time, DV, PRED, IPRED)
 }
 
@@ -54,7 +54,7 @@ tableau_simulations <- function(est){
 
 server <- function(input, output) {
 
-  ruxomodel <- mread("../models/ruxo_mapbay.cpp")
+  ruxomodel <- mread("../models/reponses/ruxo_mapbay.cpp")
 
   # Reactives
 
