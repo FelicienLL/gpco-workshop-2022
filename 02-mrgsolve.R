@@ -5,7 +5,7 @@ library(mrgsolve)
 simple <- mread("models/simple.cpp")
 
 simple %>%
-  ev(amt = 100) %>%
+  ev(amt = 100) %>% # ev = evenement = une dose.
   mrgsim()
 
 simple %>%
@@ -41,11 +41,11 @@ ev1 <- ev(amt = 100, addl = 3, ii = 24)
 
 simple %>%
   ev(ev1) %>%
-  mrgsim(start = 0, end = 96, delta = .1) %>% tibble::as_tibble() %>% print(n = Inf)
+  mrgsim(start = 0, end = 96, delta = .1) %>%
   plot()
 
 #' Combiner plusieurs scenarios
-ev6 <- expand.ev(amt = c(100, 200, 300), addl = 3, ii = c(12,24))
+ev6 <- expand.ev(amt = c(100, 200, 300), ii = c(12,24), addl = 3)
 
 simple %>%
   ev(ev6) %>%
@@ -55,7 +55,7 @@ simple %>%
 #' Etat d'equilibre
 simple %>%
   ev(amt = 100, ss = 1, ii = 24) %>% # <- steady-state = 1 = YES, every 24h
-  mrgsim(start = 0, end = 96, delta = .1, recsort = 3) %>% # <- recsort = RECord SORT
+  mrgsim(start = 0, end = 96, delta = .1, recsort = 3) %>% # <- recsort = RECord SORT = 3
   plot()
 
 
@@ -66,7 +66,7 @@ param(simple) # Juste regarder
 param(simple, TVCL = 3) # Modifier : retourne un modele "mis a jour"
 
 simple %>%
-  param(TVCL = .1) %>%
+  param(TVCL = 1) %>%
   ev(amt = 100) %>%
   mrgsim() %>%
   plot()
@@ -74,7 +74,7 @@ simple %>%
 #' Idem pour les covariables
 
 simple %>%
-  param(BW = 90) %>%
+  param(BW = 10) %>%
   ev(amt = 100) %>%
   mrgsim() %>%
   plot()
