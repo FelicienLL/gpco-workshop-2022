@@ -1,17 +1,26 @@
 #' Modifier "models/ruxo.cpp" en "models/ruxo_mapbay.cpp"
 
+#' Pour pouvoir utiliser le modele dans mapbayr, 5 modifications a faire:
+#' 1- Dans $PARAM. Ajouter des parametres ETA1, ETA2 etc... que l'on veut estimer
+#' 2- Dans $MAIN. Ajouter ces ETA1, ETA2 etc... dans la definition de CL, V...
+#' 3- Dans $SIGMA : Erreur proportionnelle en PREMIER, Erreur additive en DEUXIEME.
+#' 4- Dans $CAPTURE : La concentration predite doit etre DV.
+#' 5- Dans $CAPTURE : Capturer les variables qui vous interesse : CL, V ?
+
+
 #' Importer-le dans R
 ruxo_mapbay <- mread("models/ruxo_mapbay.cpp")
 check_mapbayr_model(ruxo_mapbay)
-
 #' Importer un dataset de ruxolitinib a analyser
 ruxodata <- read.csv("data/ruxodata.csv")
 ruxodata
 ruxo_est <- mapbayest(ruxo_mapbay, data = ruxodata)
 ruxo_est
-plot(ruxo_est)
+p <- plot(ruxo_est)
 plot(ruxo_est) + scale_y_log10()
 hist(ruxo_est)
+
+as.list
 
 #' Metrique PK qui nous interesse ?
 #' 1. AUC
@@ -34,6 +43,7 @@ ruxo_est %>%
          obsaug = TRUE) %>% #OBSservation AUGmentation = ajouter temps si utilisation de "data_set()"
   filter(TIME == 8) %>%
   select(DV)
+
 
 #' 4. %Temps au-dessus de 100 ng/mL ?
 ruxo_est %>%

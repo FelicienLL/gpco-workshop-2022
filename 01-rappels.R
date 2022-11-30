@@ -28,7 +28,7 @@ library(tidyverse)
 
 #' Pipe
 log(10)
-#' CTRL + SHIFT + M
+#' %>%  CTRL + SHIFT + M
 10 %>%
   log()
 
