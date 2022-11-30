@@ -80,8 +80,6 @@ Pour installer un package, il suffit d'éxecuter `install.packages()` avec le no
 
 ## 6. Installer les supports necessaires à l'atelier
 
-# <span style="color:red">**SUPPORTS EN COURS D'ELABORATION** </span>  
-
 * Revenez tout en haut de la page et cliquer sur l'icône verte **"<> Code"** et sélectionnez "Download ZIP"
 
 ```{r, echo=FALSE, out.height="50%", out.width="50%"}

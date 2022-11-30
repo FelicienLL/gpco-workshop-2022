@@ -61,7 +61,7 @@ finaliser l’installation (voir les instructions d’installation).
 
 <!-- -->
 
-    #> [1] "R version 4.2.0 (2022-04-22 ucrt)"
+    #> [1] "R version 4.2.2 (2022-10-31)"
 
 - Éxecutez `Sys.which("make")` pour voir vous pouvez compiler du C++.
   Vous devez obtenir un message du type :
@@ -96,8 +96,6 @@ packages suivants:
   sans écrire de code. `install.package("shiny")`
 
 ## 6. Installer les supports necessaires à l’atelier
-
-# <span style="color:red">**SUPPORTS EN COURS D’ELABORATION** </span>
 
 - Revenez tout en haut de la page et cliquer sur l’icône verte **“\<\>
   Code”** et sélectionnez “Download ZIP”
