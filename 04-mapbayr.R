@@ -50,10 +50,11 @@ tableau_predictions <- function(est){
 
 
 #' 3. Concentration au temps TX... 8h ?
+#' Necessite de faire des simulations: use_posterior()
 ruxo_est %>%
   use_posterior() %>%
   data_set(ruxodata) %>%
-  mrgsim(start = 8, end = 8,
+  mrgsim(start = 0, end = 24,
          obsaug = TRUE) %>% #OBSservation AUGmentation = ajouter temps si utilisation de "data_set()"
   filter(TIME == 8) %>%
   select(DV)

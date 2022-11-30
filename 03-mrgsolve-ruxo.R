@@ -16,7 +16,7 @@ ruxo %>%
   zero_re() %>%
   ev(poso_ruxo) %>%
   mrgsim(end = 24, delta = 0.1, recsort = 3) %>%
-  plot() # "CP", "logy = TRUE"
+  plot() # "'CP'", "logy = TRUE"
 
 # Covariables ok ?
 covariables_ruxo <- expand.idata(SEX = c(0, 1), BW = c(30, 60, 90))

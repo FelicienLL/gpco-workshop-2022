@@ -16,10 +16,10 @@ rnorm(n = 10, mean = 0, sd = 1)
 rnorm(10, 0, 1)
 
 #' a creer soi meme
-ajouter_10 <- function(x){
-  x + 10
+calcul_difficile <- function(x, y){
+  x + y
 }
-ajouter_10(2)
+calcul_difficile(x = 2, y = 3)
 
 
 #' Package
@@ -27,9 +27,6 @@ ajouter_10(2)
 #' install.packages("mapbayr")
 (.packages())
 #' 2. CHARGER
-library(mapbayr)
-(.packages())
-
 library(tidyverse)
 (.packages())
 

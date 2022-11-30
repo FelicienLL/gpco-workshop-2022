@@ -45,6 +45,8 @@ simple %>%
   plot()
 
 #' Combiner plusieurs scenarios
+#' 100, 200, 300 mg
+#' toutes les 12 ou 24 h
 ev6 <- expand.ev(amt = c(100, 200, 300), ii = c(12,24), addl = 3)
 
 simple %>%
@@ -92,6 +94,12 @@ simple2 %>%
 simple2 %>%
   ev(amt = 100) %>%
   mrgsim(nid = 10) %>% # <-- nid = 10
+  plot()
+
+simple2 %>%
+  zero_re() %>% # <-- "zero random effects"
+  ev(amt = 100) %>%
+  mrgsim(nid = 10) %>%
   plot()
 
 simple2 %>%
