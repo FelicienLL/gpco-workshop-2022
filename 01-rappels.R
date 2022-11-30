@@ -15,6 +15,13 @@ exp(a)
 rnorm(n = 10, mean = 0, sd = 1)
 rnorm(10, 0, 1)
 
+#' a creer soi meme
+ajouter_10 <- function(x){
+  x + 10
+}
+ajouter_10(2)
+
+
 #' Package
 #' 1. INSTALLER
 #' install.packages("mapbayr")
