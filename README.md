@@ -87,13 +87,13 @@ packages suivants:
   `install.packages("tidyverse")`
 
 - **mrgsolve**: package pour coder des modèles de pharmacocinétique de
-  population et faire des simulations. `install.package("mrgsolve")`
+  population et faire des simulations. `install.packages("mrgsolve")`
 
 - **mapbayr**: package pour faire des estimation bayésiennes à partir
-  d’un modèle codé dans mrgsolve. `install.package("mapbayr")`
+  d’un modèle codé dans mrgsolve. `install.packages("mapbayr")`
 
 - **shiny**: package pour générer une interface web (HTML) et utiliser R
-  sans écrire de code. `install.package("shiny")`
+  sans écrire de code. `install.packages("shiny")`
 
 ## 6. Installer les supports necessaires à l’atelier
 
