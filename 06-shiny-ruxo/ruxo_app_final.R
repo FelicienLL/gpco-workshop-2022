@@ -78,18 +78,22 @@ server <- function(input, output) {
   # Outputs
 
   output$CLAUCtext <- renderText({
+    shiny::req(re_est())
     ecrire_commentaire_CL(est = re_est())
   })
 
   output$predtab <- renderTable({
+    shiny::req(re_est())
     tableau_predictions(est = re_est())
   })
 
   output$predplot <- renderPlot({
+    shiny::req(re_est())
     plot(re_est())
   })
 
   output$simutab <- renderTable({
+    shiny::req(re_est())
     re_posthoc()
   })
 }

@@ -32,11 +32,16 @@ library(tidyverse)
 
 #' Pipe
 log(10)
-#' %>%  CTRL + SHIFT + M
+#' %>%  CTRL + SHIFT + M ou CMD + SHIFT + M
+#' %>% %>% %>% %>% %>%
+
 10 %>%
   log()
 
 exp(sqrt(log(10)))
+b <- log(10)
+sqrt(b)
+
 10 %>%
   log() %>%
   sqrt() %>%
